@@ -1,0 +1,148 @@
+.section {
+  background: #f4f4f4;
+  padding: 100px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 60px;
+}
+
+/* ================= WRAPPER ================= */
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= CIRCLE ================= */
+
+.circle {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #e6e6e6 0deg 72deg,
+    #dddddd 72deg 144deg,
+    #e6e6e6 144deg 216deg,
+    #dddddd 216deg 288deg,
+    #e6e6e6 288deg 360deg
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerCircle {
+  width: 140px;
+  height: 140px;
+  background: #f4f4f4;
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* ================= ICONS ================= */
+
+.icon {
+  position: absolute;
+  font-size: 18px;
+  color: #444;
+}
+
+.icon1 {
+  top: 60px;
+  left: 140px;
+}
+.icon2 {
+  top: 110px;
+  right: 60px;
+}
+.icon3 {
+  bottom: 110px;
+  right: 70px;
+}
+.icon4 {
+  bottom: 70px;
+  left: 150px;
+}
+.icon5 {
+  top: 150px;
+  left: 60px;
+}
+
+/* ================= TEXT POSITIONS ================= */
+
+.leftTop {
+  position: absolute;
+  left: -220px;
+  top: 60px;
+  font-weight: 600;
+  color: #444;
+}
+
+.rightTop {
+  position: absolute;
+  right: -260px;
+  top: 50px;
+  font-weight: 600;
+}
+
+.rightMiddle {
+  position: absolute;
+  right: -260px;
+  top: 160px;
+  font-weight: 600;
+}
+
+.rightBottom {
+  position: absolute;
+  right: -240px;
+  bottom: 60px;
+  font-weight: 600;
+}
+
+.leftBottom {
+  position: absolute;
+  left: -220px;
+  bottom: 80px;
+  font-weight: 600;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .leftTop,
+  .rightTop,
+  .rightMiddle,
+  .rightBottom,
+  .leftBottom {
+    position: static;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .circle {
+    margin: 40px 0;
+  }
+}

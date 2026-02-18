@@ -1,0 +1,126 @@
+/* ================= HERO ================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  background-image: url("/saludHero.jpg"); /* Tu imagen */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Overlay blanco translúcido */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+/* Contenido */
+
+.container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 6%;
+}
+
+/* ================= TITULO ================= */
+
+.container h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #003b5c;
+  margin-bottom: 10px;
+}
+
+.container h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #003b5c;
+  margin-bottom: 20px;
+}
+
+/* ================= DESCRIPCIÓN ================= */
+
+.container p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 750px;
+  margin-bottom: 30px;
+}
+
+/* ================= BOTONES ================= */
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  padding: 12px 22px;
+  background-color: #1f4fff;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background-color: #1536b8;
+}
+
+.secondaryBtn {
+  padding: 12px 22px;
+  border: 1px solid #1f4fff;
+  color: #1f4fff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background-color: #1f4fff;
+  color: white;
+}
+
+/* ================= NOTA ================= */
+
+.note {
+  display: block;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 90px; /* Compensa navbar fixed */
+  }
+
+  .container h1 {
+    font-size: 28px;
+  }
+
+  .container h2 {
+    font-size: 16px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
