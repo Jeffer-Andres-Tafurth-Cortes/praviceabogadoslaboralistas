@@ -1,6 +1,6 @@
 .section {
   padding: 110px 0;
-  background: #ffffff;
+  background: #f9fbfd;
 }
 
 .container {
@@ -8,8 +8,6 @@
   margin: auto;
   padding: 0 5%;
 }
-
-/* ================= TITULO ================= */
 
 .title {
   font-size: 36px;
@@ -29,14 +27,13 @@
 }
 
 .intro {
-  color: #808080;
+  color: #6f7f8f;
   line-height: 1.7;
   margin-bottom: 18px;
   max-width: 950px;
 }
 
-/* ================= GRID ================= */
-
+/* GRID TARJETAS */
 .grid {
   margin-top: 55px;
   display: grid;
@@ -44,15 +41,13 @@
   gap: 40px;
 }
 
-/* ================= TARJETAS ================= */
-
 .card {
   background: #ffffff;
-  padding: 26px;
+  padding: 28px;
   border-radius: 12px;
   border: 1px solid rgba(0, 74, 128, 0.12);
   box-shadow: 0 12px 30px rgba(0, 74, 128, 0.06);
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
 }
@@ -91,8 +86,6 @@
   color: #f4c300;
 }
 
-/* ================= TEXTO FINAL ================= */
-
 .note {
   display: block;
   margin-top: 12px;
@@ -101,8 +94,7 @@
   font-weight: 600;
 }
 
-/* ================= BLOQUE REFORMA ================= */
-
+/* BLOQUE REFORMA */
 .reforma {
   margin-top: 80px;
   background: #ffffff;
@@ -132,14 +124,11 @@
   color: #f4c300;
 }
 
-/* ================= BOTÓN APP TECNOLÓGICO ================= */
-
+/* BOTÓN APP */
 .appButtonWrapper {
   margin-top: 70px;
   text-align: center;
 }
-
-/* Botón base */
 
 .appButton {
   position: relative;
@@ -147,36 +136,24 @@
   align-items: center;
   justify-content: center;
   padding: 18px 42px;
-
   background: linear-gradient(135deg, #00365e, #004a80, #005c9e);
-
   color: #ffffff;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
-
   border-radius: 10px;
   text-decoration: none;
   overflow: hidden;
-
   border: 1px solid rgba(244, 195, 0, 0.4);
-
-  box-shadow:
-    0 10px 30px rgba(0, 74, 128, 0.25),
-    inset 0 0 0 rgba(255, 255, 255, 0);
-
+  box-shadow: 0 10px 30px rgba(0, 74, 128, 0.25);
   transition: all 0.35s ease;
 }
-
-/* Texto encima */
 
 .buttonText {
   position: relative;
   z-index: 2;
 }
-
-/* Línea de escaneo tecnológica */
 
 .appButton::before {
   content: "";
@@ -195,8 +172,6 @@
   transition: 0.8s ease;
 }
 
-/* Glow exterior elegante */
-
 .buttonGlow {
   position: absolute;
   inset: -3px;
@@ -211,8 +186,6 @@
   transition: 0.4s ease;
   z-index: 0;
 }
-
-/* Hover */
 
 .appButton:hover {
   transform: translateY(-4px);
@@ -229,14 +202,7 @@
   opacity: 0.6;
 }
 
-/* Active */
-
-.appButton:active {
-  transform: translateY(-1px);
-}
-
-/* ================= RESPONSIVE ================= */
-
+/* RESPONSIVE */
 @media (max-width: 1300px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);

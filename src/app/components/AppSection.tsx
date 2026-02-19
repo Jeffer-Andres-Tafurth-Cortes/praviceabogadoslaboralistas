@@ -19,7 +19,11 @@ export default function AppSection() {
         </motion.h2>
 
         {/* INTRO */}
-        {[0, 1, 2].map((i) => (
+        {[
+          "La App Laboral PRAVICE no es un simple canal de consulta. Es su centro de control laboral empresarial en tiempo real.",
+          "Diseñada para empresas, gerencias, RRHH y áreas financieras, la plataforma le permite tener visibilidad, trazabilidad y respaldo jurídico permanente frente a la Reforma Laboral 2025 y todas sus obligaciones laborales.",
+          "No es información estática. Es prevención estratégica continua.",
+        ].map((text, i) => (
           <motion.p
             key={i}
             className={styles.intro}
@@ -28,13 +32,7 @@ export default function AppSection() {
             transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
             viewport={{ once: true }}
           >
-            {
-              [
-                "La App Laboral PRAVICE no es un simple canal de consulta. Es su centro de control laboral empresarial en tiempo real.",
-                "Diseñada para empresas, gerencias, RRHH y áreas financieras, la plataforma le permite tener visibilidad, trazabilidad y respaldo jurídico permanente frente a la Reforma Laboral 2025 y todas sus obligaciones laborales.",
-                "No es información estática. Es prevención estratégica continua.",
-              ][i]
-            }
+            {text}
           </motion.p>
         ))}
 
@@ -51,10 +49,7 @@ export default function AppSection() {
               className={styles.card}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.12,
-              }}
+              transition={{ duration: 0.5, delay: index * 0.12 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
@@ -76,7 +71,6 @@ export default function AppSection() {
                   </span>
                 </>
               )}
-
               {index === 1 && (
                 <>
                   <h3>{title}</h3>
@@ -94,7 +88,6 @@ export default function AppSection() {
                   </span>
                 </>
               )}
-
               {index === 2 && (
                 <>
                   <h3>{title}</h3>
@@ -111,7 +104,6 @@ export default function AppSection() {
                   </span>
                 </>
               )}
-
               {index === 3 && (
                 <>
                   <h3>{title}</h3>
@@ -143,7 +135,6 @@ export default function AppSection() {
           viewport={{ once: true }}
         >
           <h3>Implementación Reforma Laboral 2025 (Ley 2466)</h3>
-
           <ul>
             <li>Publicación del RIT actualizado</li>
             <li>Procedimiento disciplinario vigente</li>
@@ -155,7 +146,6 @@ export default function AppSection() {
             <li>Capacitaciones realizadas</li>
             <li>Auditorías periódicas</li>
           </ul>
-
           <p className={styles.note}>
             Semáforo de cumplimiento visible para gerencia.
           </p>
