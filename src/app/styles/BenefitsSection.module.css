@@ -1,6 +1,8 @@
+/* ================= SECTION ================= */
+
 .section {
-  background: #ffffff;
-  padding: 100px 20px;
+  background: #f9fbfd;
+  padding: 120px 20px;
 }
 
 .container {
@@ -11,10 +13,10 @@
 /* ================= TITLES ================= */
 
 .title {
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 700;
   color: #004a80;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   position: relative;
 }
 
@@ -25,21 +27,23 @@
   background: #f4c300;
   display: block;
   margin-top: 12px;
+  border-radius: 3px;
 }
 
 .intro {
-  font-size: 15px;
-  color: #808080;
+  font-size: 16px;
+  color: #6f7f8f;
   margin-bottom: 10px;
+  max-width: 800px;
 }
 
 /* ================= GRID ================= */
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  margin-top: 50px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 70px;
+  margin-top: 60px;
 }
 
 /* ================= LEFT ================= */
@@ -47,26 +51,26 @@
 .leftColumn {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 35px;
 }
 
 .box {
   background: #ffffff;
-  padding: 25px;
-  border-left: 5px solid #004a80;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0, 74, 128, 0.08);
-  transition: 0.3s ease;
+  padding: 28px;
+  border-left: 6px solid #004a80;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 74, 128, 0.08);
+  transition: all 0.3s ease;
 }
 
 .box:hover {
-  border-left: 5px solid #c4911a;
-  transform: translateY(-4px);
+  border-left: 6px solid #c4911a;
+  transform: translateY(-5px);
 }
 
 .box h3 {
-  margin-bottom: 15px;
-  font-size: 16px;
+  margin-bottom: 18px;
+  font-size: 18px;
   font-weight: 700;
   color: #004a80;
 }
@@ -76,23 +80,30 @@
 }
 
 .box li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-size: 14px;
-  color: #808080;
+  color: #6f7f8f;
 }
 
 /* ================= RIGHT ================= */
 
+.rightColumn {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 74, 128, 0.08);
+}
+
 .rightColumn h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-size: 20px;
+  margin-bottom: 18px;
   color: #004a80;
 }
 
 .rightColumn p {
-  font-size: 14px;
-  color: #808080;
-  margin-bottom: 20px;
+  font-size: 15px;
+  color: #6f7f8f;
+  margin-bottom: 25px;
 }
 
 .features {
@@ -100,10 +111,10 @@
 }
 
 .features li {
-  margin-bottom: 14px;
-  font-size: 14px;
+  margin-bottom: 16px;
+  font-size: 15px;
   color: #004a80;
-  position: relative;
+  line-height: 1.5;
 }
 
 .features li::marker {
@@ -113,9 +124,11 @@
 /* ================= FOOTER ================= */
 
 .footerText {
-  margin-top: 50px;
+  margin-top: 60px;
   font-weight: 600;
+  font-size: 17px;
   color: #c4911a;
+  text-align: center;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -123,6 +136,20 @@
 @media (max-width: 992px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 50px;
+  }
+
+  .rightColumn {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .intro {
+    font-size: 14px;
   }
 }

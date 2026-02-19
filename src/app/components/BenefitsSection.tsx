@@ -42,55 +42,62 @@ export default function BenefitsSection() {
         </motion.p>
 
         <div className={styles.grid}>
-          {/* ================= IZQUIERDA ================= */}
+          {/* IZQUIERDA */}
           <div className={styles.leftColumn}>
-            {["Visibilidad", "Trazabilidad", "Eficiencia"].map(
-              (title, index) => (
-                <motion.div
-                  key={index}
-                  className={styles.box}
-                  initial={{ opacity: 0, y: 25 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.5,
-                    delay: index * 0.15,
-                  }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -4 }}
-                >
-                  <h3>{title}</h3>
-                  {index === 0 && (
-                    <ul>
-                      <li>Procesos disciplinarios activos</li>
-                      <li>Demandas laborales</li>
-                      <li>Implementación Reforma 2025</li>
-                      <li>Estado de contratos y RIT</li>
-                      <li>Comité de Convivencia Laboral</li>
-                    </ul>
-                  )}
-                  {index === 1 && (
-                    <ul>
-                      <li>Actas de descargos</li>
-                      <li>Citaciones y decisiones motivadas</li>
-                      <li>Liquidaciones y paz y salvo</li>
-                      <li>Autorizaciones de datos</li>
-                      <li>Evidencia para auditorías</li>
-                    </ul>
-                  )}
-                  {index === 2 && (
-                    <ul>
-                      <li>Validación previa de despidos</li>
-                      <li>Control de horas extras</li>
-                      <li>Alertas de vencimientos legales</li>
-                      <li>Prevención de contingencias</li>
-                    </ul>
-                  )}
-                </motion.div>
-              ),
-            )}
+            {[
+              {
+                title: "Visibilidad",
+                items: [
+                  "Procesos disciplinarios activos",
+                  "Demandas laborales",
+                  "Implementación Reforma 2025",
+                  "Estado de contratos y RIT",
+                  "Comité de Convivencia Laboral",
+                ],
+              },
+              {
+                title: "Trazabilidad",
+                items: [
+                  "Actas de descargos",
+                  "Citaciones y decisiones motivadas",
+                  "Liquidaciones y paz y salvo",
+                  "Autorizaciones de datos",
+                  "Evidencia para auditorías",
+                ],
+              },
+              {
+                title: "Eficiencia",
+                items: [
+                  "Validación previa de despidos",
+                  "Control de horas extras",
+                  "Alertas de vencimientos legales",
+                  "Prevención de contingencias",
+                ],
+              },
+            ].map((block, index) => (
+              <motion.div
+                key={index}
+                className={styles.box}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.15,
+                }}
+                viewport={{ once: true }}
+                whileHover={{ y: -4 }}
+              >
+                <h3>{block.title}</h3>
+                <ul>
+                  {block.items.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
 
-          {/* ================= DERECHA ================= */}
+          {/* DERECHA */}
           <motion.div
             className={styles.rightColumn}
             initial={{ opacity: 0, x: 30 }}
@@ -119,9 +126,8 @@ export default function BenefitsSection() {
                 en documentación o contratos.
               </li>
               <li>
-                <strong>Tomar decisiones laborales informadas:</strong>
-                Validar terminaciones, aprobar liquidaciones y gestionar
-                inspecciones.
+                <strong>Tomar decisiones laborales informadas:</strong> Validar
+                terminaciones, aprobar liquidaciones y gestionar inspecciones.
               </li>
             </ul>
           </motion.div>
