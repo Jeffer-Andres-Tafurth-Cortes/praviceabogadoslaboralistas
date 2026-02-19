@@ -58,7 +58,6 @@ export default function AppSection() {
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
-              {/* Mantienes tu contenido original dentro */}
               {index === 0 && (
                 <>
                   <h3>{title}</h3>
@@ -160,6 +159,24 @@ export default function AppSection() {
           <p className={styles.note}>
             Semáforo de cumplimiento visible para gerencia.
           </p>
+        </motion.div>
+
+        {/* BOTÓN ACCESO APP */}
+        <motion.div
+          className={styles.appButtonWrapper}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <a
+            href="https://app.pravice.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.appButton}
+          >
+            Ingresar a App Legal Pravice
+          </a>
         </motion.div>
       </div>
     </section>

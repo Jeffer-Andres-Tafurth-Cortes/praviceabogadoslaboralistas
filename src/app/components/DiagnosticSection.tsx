@@ -115,7 +115,7 @@ export default function DiagnosticSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <img src="/reunion.jpg" alt="Reunión empresarial" />
+          <img src="/diagnosticImage.jpg" alt="Reunión empresarial" />
         </motion.div>
       </div>
     </section>
