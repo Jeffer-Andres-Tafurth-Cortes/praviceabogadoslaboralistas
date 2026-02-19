@@ -22,7 +22,11 @@ export default function Footer() {
             <h4>Contáctenos</h4>
 
             <p>
-              <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />
+              <FontAwesomeIcon
+                icon={faLocationDot}
+                className={styles.icon}
+                aria-hidden="true"
+              />
               Oficina Principal Bogotá
               <br />
               Calle 98 #22-64, Oficina 716
@@ -33,18 +37,39 @@ export default function Footer() {
             </p>
 
             <p>
-              <FontAwesomeIcon icon={faPhone} className={styles.icon} />
-              <strong>Teléfono:</strong> +57 (601) 309 9331 <br />
-              <strong>WhatsApp:</strong> +57 311 465 9315
+              <FontAwesomeIcon
+                icon={faPhone}
+                className={styles.icon}
+                aria-hidden="true"
+              />
+              <strong>Teléfono:</strong>{" "}
+              <a href="tel:+576013099331">+57 (601) 309 9331</a>
+              <br />
+              <strong>WhatsApp:</strong>{" "}
+              <a
+                href="https://wa.me/573114659315"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                +57 311 465 9315
+              </a>
             </p>
 
             <p>
-              <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
-              info@pravice.co
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                className={styles.icon}
+                aria-hidden="true"
+              />
+              <a href="mailto:info@pravice.co">info@pravice.co</a>
             </p>
 
             <p>
-              <FontAwesomeIcon icon={faClock} className={styles.icon} />
+              <FontAwesomeIcon
+                icon={faClock}
+                className={styles.icon}
+                aria-hidden="true"
+              />
               <strong>Horario:</strong>
               <br />
               Lunes a Viernes: 8:00 AM - 6:00 PM
@@ -53,8 +78,8 @@ export default function Footer() {
             </p>
 
             <div className={styles.badges}>
-              <span>REGISTRO CNA 2024</span>
-              <span>CERTIFICACIÓN ISO 9001</span>
+              <span role="status">REGISTRO CNA 2024</span>
+              <span role="status">CERTIFICACIÓN ISO 9001</span>
             </div>
           </div>
 
@@ -75,11 +100,24 @@ export default function Footer() {
           {/* COLUMNA 3 */}
           <div className={styles.col}>
             <h4>Sectores Atendidos</h4>
-            <p className={styles.sectors}>
-              Manufactura · Comercio · Servicios · Tecnología · Construcción ·
-              Salud · Educación · Logística · Agroindustria · Financiero ·
-              Energía · Telecomunicaciones
-            </p>
+            <ul className={styles.sectorsList}>
+              {[
+                "Manufactura",
+                "Comercio",
+                "Servicios",
+                "Tecnología",
+                "Construcción",
+                "Salud",
+                "Educación",
+                "Logística",
+                "Agroindustria",
+                "Financiero",
+                "Energía",
+                "Telecomunicaciones",
+              ].map((sector, idx) => (
+                <li key={idx}>{sector}</li>
+              ))}
+            </ul>
           </div>
         </div>
 
@@ -87,7 +125,7 @@ export default function Footer() {
         <div className={styles.legal}>
           <p>
             © 2024 PRAVICE Abogados Laboralistas. Todos los derechos reservados.
-            |<a href="#"> Política de Privacidad</a> |
+            | <a href="#">Política de Privacidad</a> |
             <a href="#"> Términos y Condiciones</a> |
             <a href="#"> Aviso Legal</a> |
             <a href="#"> Tratamiento de Datos Personales</a>
@@ -101,16 +139,17 @@ export default function Footer() {
         </div>
       </footer>
 
-      {/* ================= BOTÓN WHATSAPP FLOTANTE ================= */}
-
+      {/* BOTÓN WHATSAPP FLOTANTE */}
       <a
         href="https://wa.me/573114659315?text=Hola%20PRAVICE,%20quiero%20información%20sobre%20asesoría%20laboral."
         target="_blank"
         rel="noopener noreferrer"
         className={styles.whatsappFloat}
         aria-label="Contactar por WhatsApp"
+        role="button"
+        tabIndex={0}
       >
-        <FontAwesomeIcon icon={faWhatsapp} />
+        <FontAwesomeIcon icon={faWhatsapp} aria-hidden="true" />
       </a>
     </>
   );
