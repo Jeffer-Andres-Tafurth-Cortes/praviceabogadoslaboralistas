@@ -1,4 +1,7 @@
+"use client";
+
 import styles from "../styles/RisksSection.module.css";
+import { motion } from "framer-motion";
 
 export default function RisksSection() {
   const riesgos = [
@@ -13,18 +16,48 @@ export default function RisksSection() {
 
   return (
     <section className={styles.section}>
-      <h2 className={styles.title}>Riesgos que Prevenimos</h2>
+      {/* TÍTULO */}
+      <motion.h2
+        className={styles.title}
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Riesgos que Prevenimos
+      </motion.h2>
 
+      {/* GRID */}
       <div className={styles.grid}>
         {riesgos.map((riesgo, index) => (
-          <div key={index} className={styles.card}>
+          <motion.div
+            key={index}
+            className={styles.card}
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.4,
+              delay: index * 0.08,
+            }}
+            viewport={{ once: true }}
+            whileHover={{ y: -3 }}
+          >
             <span className={styles.bar}></span>
             <p>{riesgo}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
 
-      <p className={styles.footer}>Prevenir es más económico que defender.</p>
+      {/* FOOTER */}
+      <motion.p
+        className={styles.footer}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+        Prevenir es más económico que defender.
+      </motion.p>
     </section>
   );
 }

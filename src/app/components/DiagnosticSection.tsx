@@ -1,4 +1,7 @@
+"use client";
+
 import styles from "../styles/DiagnosticSection.module.css";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalendarCheck,
@@ -11,7 +14,13 @@ export default function DiagnosticSection() {
     <section className={styles.section} id="diagnostico">
       <div className={styles.container}>
         {/* IZQUIERDA */}
-        <div className={styles.left}>
+        <motion.div
+          className={styles.left}
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
           <h2 className={styles.title}>Diagnóstico Laboral Empresarial</h2>
 
           <p className={styles.text}>
@@ -28,55 +37,86 @@ export default function DiagnosticSection() {
             personalizada.
           </p>
 
-          {/* BENEFICIOS */}
+          {/* CARDS */}
           <div className={styles.cards}>
-            <div className={styles.card}>
-              <div className={styles.icon}>
-                <FontAwesomeIcon icon={faCalendarCheck} />
-              </div>
-              <h4>Inversión de la Asesoría</h4>
-              <p>$450.000 + IVA</p>
-              <span>
-                Totalmente aplicable al primer mes de cualquier plan contratado
-              </span>
-            </div>
-
-            <div className={styles.card}>
-              <div className={styles.icon}>
-                <FontAwesomeIcon icon={faClock} />
-              </div>
-              <h4>Respuesta Garantizada</h4>
-              <p>Confirmación de agenda en menos de 24 horas laborales</p>
-            </div>
-
-            <div className={`${styles.card} ${styles.full}`}>
-              <div className={styles.icon}>
-                <FontAwesomeIcon icon={faFileLines} />
-              </div>
-              <h4>Incluye Diagnóstico</h4>
-              <p>Evaluación preliminar de riesgos sin costo adicional</p>
-            </div>
+            {[
+              {
+                icon: faCalendarCheck,
+                title: "Inversión de la Asesoría",
+                content: "$450.000 + IVA",
+                extra:
+                  "Totalmente aplicable al primer mes de cualquier plan contratado",
+              },
+              {
+                icon: faClock,
+                title: "Respuesta Garantizada",
+                content:
+                  "Confirmación de agenda en menos de 24 horas laborales",
+              },
+              {
+                icon: faFileLines,
+                title: "Incluye Diagnóstico",
+                content: "Evaluación preliminar de riesgos sin costo adicional",
+                full: true,
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                className={`${styles.card} ${item.full ? styles.full : ""}`}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -4 }}
+              >
+                <div className={styles.icon}>
+                  <FontAwesomeIcon icon={item.icon} />
+                </div>
+                <h4>{item.title}</h4>
+                <p>{item.content}</p>
+                {item.extra && <span>{item.extra}</span>}
+              </motion.div>
+            ))}
           </div>
 
           {/* BOTONES */}
-          <div className={styles.buttons}>
+          <motion.div
+            className={styles.buttons}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
             <a className={styles.primary}>Agendar Asesoría</a>
             <a className={styles.secondary}>Solicitar Evaluación Rápida</a>
             <a className={styles.secondary}>
               Solicitar Propuesta Personalizada
             </a>
-          </div>
+          </motion.div>
 
-          <div className={styles.footer}>
+          {/* FOOTER */}
+          <motion.div
+            className={styles.footer}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
             <strong>PRAVICE Abogados Laboralistas</strong>
             <p>Blindamos su empresa para que usted pueda crecer.</p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        {/* DERECHA (IMAGEN) */}
-        <div className={styles.right}>
+        {/* DERECHA */}
+        <motion.div
+          className={styles.right}
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <img src="/reunion.jpg" alt="Reunión empresarial" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

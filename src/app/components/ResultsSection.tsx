@@ -1,5 +1,7 @@
-import styles from "../styles/ResultsSection.module.css";
+"use client";
 
+import styles from "../styles/ResultsSection.module.css";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faShieldHalved,
@@ -20,20 +22,55 @@ export default function Resultados() {
 
   return (
     <section className={styles.section}>
-      <h2 className={styles.title}>Resultados que Generamos</h2>
+      {/* TÍTULO */}
+      <motion.h2
+        className={styles.title}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Resultados que Generamos
+      </motion.h2>
 
+      {/* LISTA */}
       <div className={styles.list}>
         {items.map((item, index) => (
-          <div key={index} className={styles.item}>
-            <div className={styles.icon}>
+          <motion.div
+            key={index}
+            className={styles.item}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.4,
+              delay: index * 0.1,
+            }}
+            viewport={{ once: true }}
+            whileHover={{ y: -4 }}
+          >
+            <motion.div
+              className={styles.icon}
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 250 }}
+            >
               <FontAwesomeIcon icon={item.icon} />
-            </div>
+            </motion.div>
+
             <p>{item.text}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
 
-      <p className={styles.footer}>No improvisamos. Blindamos.</p>
+      {/* FOOTER */}
+      <motion.p
+        className={styles.footer}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        viewport={{ once: true }}
+      >
+        No improvisamos. Blindamos.
+      </motion.p>
     </section>
   );
 }

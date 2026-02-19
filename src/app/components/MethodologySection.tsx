@@ -9,50 +9,131 @@ import {
   faShieldHalved,
   faClipboardCheck,
 } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 export default function MethodologySection() {
   return (
     <section className={styles.section} id="metodologia">
       <div className={styles.container}>
-        <h2 className={styles.title}>Metodología PRAVICE</h2>
-        <p className={styles.subtitle}>Blindaje Laboral Estructurado</p>
+        {/* Título */}
+        <motion.h2
+          className={styles.title}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Metodología PRAVICE
+        </motion.h2>
+
+        <motion.p
+          className={styles.subtitle}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          Blindaje Laboral Estructurado
+        </motion.p>
 
         <div className={styles.wrapper}>
-          {/* Textos laterales */}
-          <div className={styles.leftTop}>Paso 1: Diagnóstico</div>
-          <div className={styles.rightTop}>
-            Paso 2: Implementación documental
-          </div>
-          <div className={styles.rightMiddle}>
-            Paso 3: Socialización interna
-          </div>
-          <div className={styles.rightBottom}>Paso 4: Blindaje probatorio</div>
-          <div className={styles.leftBottom}>Paso 5: Auditoría periódica</div>
+          {/* Textos laterales con aparición suave */}
+          <motion.div
+            className={styles.leftTop}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            Paso 1: Diagnóstico
+          </motion.div>
 
-          {/* Círculo */}
-          <div className={styles.circle}>
+          <motion.div
+            className={styles.rightTop}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            Paso 2: Implementación documental
+          </motion.div>
+
+          <motion.div
+            className={styles.rightMiddle}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            Paso 3: Socialización interna
+          </motion.div>
+
+          <motion.div
+            className={styles.rightBottom}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            Paso 4: Blindaje probatorio
+          </motion.div>
+
+          <motion.div
+            className={styles.leftBottom}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            Paso 5: Auditoría periódica
+          </motion.div>
+
+          {/* Círculo principal */}
+          <motion.div
+            className={styles.circle}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <div className={styles.innerCircle}></div>
 
-            <div className={`${styles.icon} ${styles.icon1}`}>
+            {/* Íconos con micro animación */}
+            <motion.div
+              className={`${styles.icon} ${styles.icon1}`}
+              whileHover={{ scale: 1.15 }}
+            >
               <FontAwesomeIcon icon={faMagnifyingGlass} />
-            </div>
+            </motion.div>
 
-            <div className={`${styles.icon} ${styles.icon2}`}>
+            <motion.div
+              className={`${styles.icon} ${styles.icon2}`}
+              whileHover={{ scale: 1.15 }}
+            >
               <FontAwesomeIcon icon={faFileLines} />
-            </div>
+            </motion.div>
 
-            <div className={`${styles.icon} ${styles.icon3}`}>
+            <motion.div
+              className={`${styles.icon} ${styles.icon3}`}
+              whileHover={{ scale: 1.15 }}
+            >
               <FontAwesomeIcon icon={faUsers} />
-            </div>
+            </motion.div>
 
-            <div className={`${styles.icon} ${styles.icon4}`}>
+            <motion.div
+              className={`${styles.icon} ${styles.icon4}`}
+              whileHover={{ scale: 1.15 }}
+            >
               <FontAwesomeIcon icon={faShieldHalved} />
-            </div>
+            </motion.div>
 
-            <div className={`${styles.icon} ${styles.icon5}`}>
+            <motion.div
+              className={`${styles.icon} ${styles.icon5}`}
+              whileHover={{ scale: 1.15 }}
+            >
               <FontAwesomeIcon icon={faClipboardCheck} />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

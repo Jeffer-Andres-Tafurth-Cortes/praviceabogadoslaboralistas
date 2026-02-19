@@ -1,11 +1,30 @@
+"use client";
+
 import styles from "../styles/PlanSection.module.css";
+import { motion } from "framer-motion";
 
 export default function PlanSection() {
   return (
     <section className={styles.section}>
-      <h2 className={styles.title}>Planes de Outsourcing Laboral</h2>
+      {/* TÍTULO */}
+      <motion.h2
+        className={styles.title}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Planes de Outsourcing Laboral
+      </motion.h2>
 
-      <div className={styles.tableWrapper}>
+      {/* TABLA */}
+      <motion.div
+        className={styles.tableWrapper}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.1 }}
+        viewport={{ once: true }}
+      >
         <table className={styles.table}>
           <thead>
             <tr>
@@ -77,16 +96,23 @@ export default function PlanSection() {
             </tr>
           </tbody>
         </table>
-      </div>
+      </motion.div>
 
-      <div className={styles.buttons}>
+      {/* BOTONES */}
+      <motion.div
+        className={styles.buttons}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        viewport={{ once: true }}
+      >
         <a href="#" className={styles.primaryBtn}>
           Solicitar Propuesta Personalizada
         </a>
         <a href="#" className={styles.secondaryBtn}>
           Comparar Planes en Detalle
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -13,6 +13,7 @@ import {
   faUsers,
   faChartColumn,
 } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 const servicios = [
   { icon: faGavel, text: "Despidos con y sin justa causa" },
@@ -30,16 +31,41 @@ export default function ServicesSection() {
   return (
     <section className={styles.section} id="servicios">
       <div className={styles.container}>
-        <h2 className={styles.title}>Servicios Laborales Empresariales</h2>
+        {/* Título animado */}
+        <motion.h2
+          className={styles.title}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Servicios Laborales Empresariales
+        </motion.h2>
 
         <div className={styles.grid}>
           {servicios.map((servicio, index) => (
-            <div key={index} className={styles.card}>
-              <div className={styles.icon}>
+            <motion.div
+              key={index}
+              className={styles.card}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.45,
+                delay: index * 0.08,
+              }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+            >
+              <motion.div
+                className={styles.icon}
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 250 }}
+              >
                 <FontAwesomeIcon icon={servicio.icon} />
-              </div>
+              </motion.div>
+
               <span>{servicio.text}</span>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
