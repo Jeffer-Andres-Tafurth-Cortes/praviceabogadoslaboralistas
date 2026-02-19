@@ -1,5 +1,5 @@
 .section {
-  background: #f4f4f4;
+  background: #ffffff;
   padding: 100px 20px;
 }
 
@@ -11,12 +11,23 @@
 .title {
   font-size: 30px;
   font-weight: 700;
-  color: #2c3e50;
+  color: #004a80;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #f4c300;
+  display: block;
+  margin-top: 12px;
 }
 
 .subtitle {
   font-size: 14px;
-  color: #555;
+  color: #808080;
   margin-bottom: 60px;
 }
 
@@ -38,24 +49,27 @@
   border-radius: 50%;
 
   background: conic-gradient(
-    #e6e6e6 0deg 72deg,
-    #dddddd 72deg 144deg,
-    #e6e6e6 144deg 216deg,
-    #dddddd 216deg 288deg,
-    #e6e6e6 288deg 360deg
+    #004a80 0deg 72deg,
+    #5eb3e4 72deg 144deg,
+    #004a80 144deg 216deg,
+    #5eb3e4 216deg 288deg,
+    #004a80 288deg 360deg
   );
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  box-shadow: 0 20px 40px rgba(0, 74, 128, 0.15);
 }
 
 .innerCircle {
   width: 140px;
   height: 140px;
-  background: #f4f4f4;
+  background: #ffffff;
   border-radius: 50%;
   position: absolute;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.05);
 }
 
 /* ================= ICONS ================= */
@@ -63,8 +77,15 @@
 .icon {
   position: absolute;
   font-size: 18px;
-  color: #444;
+  color: #ffffff;
+  transition: 0.3s ease;
 }
+
+.circle:hover .icon {
+  color: #f4c300;
+}
+
+/* Posiciones */
 
 .icon1 {
   top: 60px;
@@ -89,40 +110,50 @@
 
 /* ================= TEXT POSITIONS ================= */
 
-.leftTop {
+.leftTop,
+.rightTop,
+.rightMiddle,
+.rightBottom,
+.leftBottom {
   position: absolute;
+  font-weight: 600;
+  color: #004a80;
+  transition: 0.3s ease;
+}
+
+.leftTop {
   left: -220px;
   top: 60px;
-  font-weight: 600;
-  color: #444;
 }
 
 .rightTop {
-  position: absolute;
   right: -260px;
   top: 50px;
-  font-weight: 600;
 }
 
 .rightMiddle {
-  position: absolute;
   right: -260px;
   top: 160px;
-  font-weight: 600;
 }
 
 .rightBottom {
-  position: absolute;
   right: -240px;
   bottom: 60px;
-  font-weight: 600;
 }
 
 .leftBottom {
-  position: absolute;
   left: -220px;
   bottom: 80px;
-  font-weight: 600;
+}
+
+/* Hover elegante en textos */
+
+.wrapper:hover .leftTop,
+.wrapper:hover .rightTop,
+.wrapper:hover .rightMiddle,
+.wrapper:hover .rightBottom,
+.wrapper:hover .leftBottom {
+  color: #c4911a;
 }
 
 /* ================= RESPONSIVE ================= */

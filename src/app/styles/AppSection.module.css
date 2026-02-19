@@ -1,60 +1,82 @@
 .section {
-  padding: 80px 0;
+  padding: 110px 0;
   background: #ffffff;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1550px; /* Mucho más ancho */
   margin: auto;
-  padding: 0 6%;
+  padding: 0 5%;
 }
 
-/* TITULO */
+/* ================= TITULO ================= */
 
 .title {
   font-size: 36px;
   font-weight: 700;
-  color: #000;
+  color: #004a80;
   margin-bottom: 25px;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #f4c300;
+  display: block;
+  margin-top: 14px;
 }
 
 .intro {
   color: #808080;
   line-height: 1.7;
-  margin-bottom: 14px;
-  max-width: 900px;
+  margin-bottom: 18px;
+  max-width: 950px;
 }
 
-/* GRID 4 COLUMNAS */
+/* ================= GRID 4 COLUMNAS ================= */
 
 .grid {
-  margin-top: 45px;
+  margin-top: 55px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
+  gap: 40px;
 }
 
-/* TARJETAS */
+/* ================= TARJETAS ================= */
 
 .card {
-  background: #f9f9f9;
-  padding: 26px;
-  border-radius: 10px;
-  border: 1px solid #e5e5e5;
+  background: #ffffff;
+  padding: 26px; /* ligeramente más compacto */
+  border-radius: 12px;
+  border: 1px solid rgba(0, 74, 128, 0.12);
+  box-shadow: 0 12px 30px rgba(0, 74, 128, 0.06);
+  transition: 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #f4c300;
+  box-shadow: 0 18px 40px rgba(0, 74, 128, 0.12);
 }
 
 .card h3 {
-  color: #00a480;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: #555;
+  color: #004a80;
+  font-size: 17px; /* Ajustado para 4 columnas */
   margin-bottom: 12px;
 }
 
-/* LISTAS */
+.card p {
+  color: #808080;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+/* ================= LISTAS ================= */
 
 .card ul {
   padding-left: 18px;
@@ -63,31 +85,39 @@
 
 .card li {
   margin-bottom: 8px;
-  color: #333;
+  color: #004a80;
   line-height: 1.5;
+  font-size: 14px;
 }
 
-/* TEXTO FINAL */
+.card li::marker {
+  color: #f4c300;
+}
+
+/* ================= TEXTO FINAL ================= */
 
 .note {
   display: block;
   margin-top: 12px;
-  color: #808080;
-  font-size: 14px;
+  color: #c4911a;
+  font-size: 13px;
+  font-weight: 600;
 }
 
-/* BLOQUE REFORMA */
+/* ================= BLOQUE REFORMA ================= */
 
 .reforma {
-  margin-top: 60px;
-  background: #f4f7fb;
-  padding: 35px;
-  border-radius: 12px;
+  margin-top: 80px;
+  background: #ffffff;
+  padding: 45px;
+  border-radius: 14px;
+  border-left: 6px solid #004a80;
+  box-shadow: 0 18px 40px rgba(0, 74, 128, 0.08);
 }
 
 .reforma h3 {
-  color: #5eb3e4;
-  margin-bottom: 16px;
+  color: #004a80;
+  margin-bottom: 20px;
 }
 
 .reforma ul {
@@ -96,12 +126,24 @@
 }
 
 .reforma li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  color: #808080;
+  font-size: 14px;
 }
 
-/* RESPONSIVE */
+.reforma li::marker {
+  color: #f4c300;
+}
 
-@media (max-width: 1100px) {
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1300px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }

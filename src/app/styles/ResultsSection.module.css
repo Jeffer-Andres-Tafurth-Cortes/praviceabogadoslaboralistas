@@ -1,48 +1,74 @@
 .section {
-  background: #f5f5f5;
-  padding: 60px 20px;
-  max-width: 1000px;
+  background: #ffffff;
+  padding: 70px 20px;
+  max-width: 1100px;
   margin: auto;
   font-family: "Georgia", serif;
 }
 
+/* ================= TITLE ================= */
+
 .title {
   font-size: 34px;
-  color: #2f3e50;
-  margin-bottom: 30px;
+  color: #004a80;
+  margin-bottom: 35px;
   font-weight: 700;
+  position: relative;
 }
+
+.title::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: #f4c300;
+  display: block;
+  margin-top: 14px;
+}
+
+/* ================= LIST ================= */
 
 .list {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
 }
+
+/* ================= ITEM ================= */
 
 .item {
   display: flex;
   align-items: center;
   background: #ffffff;
-  border: 1px solid #dcdcdc;
-  height: 65px;
+  border: 1px solid rgba(0, 74, 128, 0.15);
+  height: 70px;
+  border-radius: 8px;
   transition: all 0.25s ease;
+  overflow: hidden;
 }
 
 .item:hover {
-  border-color: #9faab5;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  border-color: #f4c300;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 74, 128, 0.12);
 }
 
+/* ================= ICON ================= */
+
 .icon {
-  width: 65px;
+  width: 70px;
   height: 100%;
-  background: #ececec;
+  background: #004a80;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2f3e50;
-  border-right: 1px solid #dcdcdc;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+
+.item:hover .icon {
+  background: linear-gradient(135deg, #f7c300, #c4911a);
+  color: #000;
+  border-right: none;
 }
 
 /* CLAVE para FontAwesome */
@@ -50,17 +76,26 @@
   font-size: 20px;
 }
 
+/* ================= TEXT ================= */
+
 .item p {
-  padding-left: 20px;
+  padding-left: 22px;
   font-size: 16px;
-  color: #2f3e50;
+  color: #004a80;
   font-weight: 600;
+  transition: 0.3s ease;
 }
+
+.item:hover p {
+  color: #c4911a;
+}
+
+/* ================= FOOTER ================= */
 
 .footer {
   text-align: center;
-  margin-top: 28px;
-  color: #555;
+  margin-top: 30px;
+  color: #808080;
   font-size: 14px;
   font-weight: 600;
 }

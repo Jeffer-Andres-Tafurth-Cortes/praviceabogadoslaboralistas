@@ -1,105 +1,135 @@
+/* ================= SECCIÓN ================= */
+
 .section {
-  padding: 70px 20px;
-  background: #f5f5f5;
+  padding: 80px 20px;
+  background: #ffffff;
   max-width: 1150px;
   margin: auto;
 }
 
+/* ================= TÍTULO ================= */
+
 .title {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 700;
-  color: #2f3e50;
-  margin-bottom: 30px;
+  color: #004a80;
+  margin-bottom: 40px;
+  position: relative;
 }
 
-/* wrapper para scroll en celular */
+.title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #f4c300;
+  display: block;
+  margin-top: 14px;
+}
+
+/* ================= TABLE WRAPPER ================= */
+
 .tableWrapper {
   overflow-x: auto;
 }
 
-/* TABLA */
+/* ================= TABLA ================= */
+
 .table {
   width: 100%;
   border-collapse: collapse;
-  background: #fff;
+  background: #ffffff;
+  border: 1px solid rgba(0, 74, 128, 0.15);
 }
 
-/* encabezados */
+/* ================= ENCABEZADOS ================= */
+
 .table thead th {
-  background: #f0f0f0;
-  padding: 18px;
+  background: rgba(0, 74, 128, 0.06);
+  padding: 20px;
   font-weight: 700;
-  color: #333;
+  color: #004a80;
   text-align: center;
-  border: 1px solid #ddd;
+  border: 1px solid rgba(0, 74, 128, 0.15);
 }
 
-/* columna destacada */
+/* ================= COLUMNA DESTACADA ================= */
+
 .highlight {
-  background: #00a480 !important;
-  color: white !important;
+  background: #004a80 !important;
+  color: #ffffff !important;
 }
 
-/* filas */
+/* ================= CELDAS ================= */
+
 .table td {
-  padding: 18px;
-  border: 1px solid #ddd;
+  padding: 20px;
+  border: 1px solid rgba(0, 74, 128, 0.12);
   vertical-align: top;
   font-size: 14px;
   line-height: 1.6;
-  color: #444;
+  color: #004a80;
 }
+
+/* ================= FILA TÍTULO ================= */
 
 .rowTitle {
   font-weight: 700;
-  background: #f7f7f7;
+  background: rgba(0, 74, 128, 0.04);
   width: 220px;
 }
 
-/* mejor plan */
+/* ================= MEJOR PLAN ================= */
+
 .bestPlan {
-  background: #f0faf7;
-  border-left: 4px solid #00a480;
+  background: rgba(244, 195, 0, 0.08);
+  border-left: 4px solid #f4c300;
 }
 
-/* BOTONES */
+/* ================= BOTONES ================= */
+
 .buttons {
-  margin-top: 25px;
+  margin-top: 30px;
   display: flex;
-  gap: 15px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 
+/* BOTÓN PRINCIPAL */
+
 .primaryBtn {
-  background: #00a480;
-  color: white;
-  padding: 14px 22px;
+  background: #004a80;
+  color: #ffffff;
+  padding: 15px 26px;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 4px;
-  transition: 0.25s;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
 .primaryBtn:hover {
-  background: #008a6b;
+  background: #c4911a;
+  transform: translateY(-2px);
 }
 
+/* BOTÓN SECUNDARIO */
+
 .secondaryBtn {
-  border: 2px solid #5eb3e4;
-  color: #5eb3e4;
-  padding: 14px 22px;
+  border: 2px solid #004a80;
+  color: #004a80;
+  padding: 15px 26px;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 4px;
-  transition: 0.25s;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
 .secondaryBtn:hover {
-  background: #5eb3e4;
-  color: white;
+  background: #004a80;
+  color: #ffffff;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 768px) {
   .title {
     font-size: 26px;

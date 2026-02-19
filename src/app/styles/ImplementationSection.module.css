@@ -1,7 +1,7 @@
 /* ================= SECTION ================= */
 
 .section {
-  background: #f4f4f4;
+  background: #ffffff;
   padding: 90px 20px;
 }
 
@@ -15,13 +15,23 @@
 .title {
   font-size: 30px;
   font-weight: 700;
-  color: #2c3e50;
+  color: #004a80;
   margin-bottom: 10px;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #f4c300;
+  display: block;
+  margin-top: 12px;
 }
 
 .subtitle {
   font-size: 14px;
-  color: #666;
+  color: #808080;
   margin-bottom: 50px;
 }
 
@@ -38,26 +48,45 @@
 .item {
   display: flex;
   flex-direction: column;
+  transition: 0.3s ease;
 }
+
+/* Número elegante */
 
 .number {
   font-size: 13px;
-  color: #777;
+  color: #c4911a;
+  font-weight: 600;
   margin-bottom: 8px;
+  letter-spacing: 1px;
 }
+
+/* Línea premium */
 
 .line {
   height: 3px;
   width: 100%;
-  background: #2e4fff; /* azul institucional */
+  background: linear-gradient(90deg, #004a80, #5eb3e4);
   margin-bottom: 12px;
+  transition: 0.3s ease;
 }
 
 .item h3 {
   font-size: 15px;
   font-weight: 600;
-  color: #444;
+  color: #004a80;
   line-height: 1.5;
+  transition: 0.3s ease;
+}
+
+/* Hover profesional */
+
+.item:hover .line {
+  background: linear-gradient(90deg, #f7c300, #c4911a);
+}
+
+.item:hover h3 {
+  color: #c4911a;
 }
 
 /* ================= RESPONSIVE ================= */

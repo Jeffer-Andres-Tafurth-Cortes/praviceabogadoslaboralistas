@@ -7,8 +7,9 @@
   transition: 0.3s ease;
 }
 
+/* Cuando hace scroll */
 .scrolled {
-  background: white;
+  background: #ffffff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -21,12 +22,14 @@
   align-items: center;
 }
 
+/* LOGO */
 .logo {
   font-weight: 700;
   font-size: 18px;
-  color: #2c3e50;
+  color: #004a80; /* Azul corporativo */
 }
 
+/* LINKS */
 .links {
   display: flex;
   align-items: center;
@@ -36,36 +39,43 @@
 .links a {
   text-decoration: none;
   font-size: 14px;
-  color: #444;
+  color: #808080; /* Gris elegante */
   transition: 0.3s;
 }
 
+/* Hover elegante */
 .links a:hover {
-  color: #2e4fff;
+  color: #004a80; /* Azul corporativo */
 }
 
+/* Sección activa */
 .active {
-  color: #2e4fff;
+  color: #004a80;
   font-weight: 600;
+  border-bottom: 2px solid #f4c300; /* Acento dorado */
+  padding-bottom: 4px;
 }
 
-/* Blog estilo neutro */
+/* BLOG */
 .blog {
   font-weight: 500;
+  color: #004a80;
 }
 
-/* CTA principal */
+/* BOTÓN APP */
 .cta {
-  background: #2e4fff;
-  color: white !important;
+  background: #f4c300; /* Amarillo principal */
+  color: #000 !important;
   padding: 10px 18px;
   border-radius: 6px;
   font-weight: 600;
   transition: 0.3s ease;
 }
 
+/* Hover botón */
 .cta:hover {
-  background: #1f36c7;
+  background: #c4911a; /* Dorado más profundo */
+  color: #ffffff !important;
 }
 
 /* ================= MOBILE ================= */
@@ -74,6 +84,7 @@
   display: none;
   font-size: 22px;
   cursor: pointer;
+  color: #004a80;
 }
 
 @media (max-width: 992px) {
@@ -81,7 +92,7 @@
     position: absolute;
     top: 70px;
     right: 0;
-    background: white;
+    background: #ffffff;
     flex-direction: column;
     width: 240px;
     padding: 25px;

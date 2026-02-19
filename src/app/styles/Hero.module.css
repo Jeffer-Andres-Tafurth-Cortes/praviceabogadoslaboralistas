@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
 
-  background-image: url("/saludHero.jpg"); /* Tu imagen */
+  background-image: url("/saludHero.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -18,7 +18,7 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
 }
 
 /* Contenido */
@@ -37,14 +37,14 @@
 .container h1 {
   font-size: 42px;
   font-weight: 700;
-  color: #003b5c;
+  color: #004a80; /* Azul corporativo */
   margin-bottom: 10px;
 }
 
 .container h2 {
   font-size: 18px;
   font-weight: 600;
-  color: #003b5c;
+  color: #004a80;
   margin-bottom: 20px;
 }
 
@@ -53,7 +53,7 @@
 .container p {
   font-size: 16px;
   line-height: 1.7;
-  color: #555;
+  color: #808080; /* Gris elegante */
   max-width: 750px;
   margin-bottom: 30px;
 }
@@ -66,33 +66,36 @@
   flex-wrap: wrap;
 }
 
+/* BOTÓN PRINCIPAL */
 .primaryBtn {
   padding: 12px 22px;
-  background-color: #1f4fff;
-  color: white;
+  background-color: #f4c300; /* Amarillo estratégico */
+  color: #000;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 4px;
   transition: 0.3s ease;
 }
 
 .primaryBtn:hover {
-  background-color: #1536b8;
+  background-color: #c4911a; /* Dorado profundo */
+  color: #ffffff;
 }
 
+/* BOTÓN SECUNDARIO */
 .secondaryBtn {
   padding: 12px 22px;
-  border: 1px solid #1f4fff;
-  color: #1f4fff;
+  border: 2px solid #004a80; /* Azul corporativo */
+  color: #004a80;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 4px;
   transition: 0.3s ease;
 }
 
 .secondaryBtn:hover {
-  background-color: #1f4fff;
-  color: white;
+  background-color: #004a80;
+  color: #ffffff;
 }
 
 /* ================= NOTA ================= */
@@ -101,14 +104,14 @@
   display: block;
   margin-top: 12px;
   font-size: 13px;
-  color: #777;
+  color: #808080;
 }
 
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
   .hero {
-    padding-top: 90px; /* Compensa navbar fixed */
+    padding-top: 90px;
   }
 
   .container h1 {
