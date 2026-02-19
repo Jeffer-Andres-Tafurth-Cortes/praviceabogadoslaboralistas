@@ -22,7 +22,6 @@ export default function WhyChoosingUs() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        {/* Título */}
         <motion.h2
           className={styles.title}
           initial={{ opacity: 0, y: 30 }}
@@ -45,21 +44,17 @@ export default function WhyChoosingUs() {
                 delay: index * 0.1,
               }}
               viewport={{ once: true }}
-              whileHover={{ y: -5 }}
+              whileHover={{ y: -6 }}
             >
-              <motion.div
-                className={styles.icon}
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 250 }}
-              >
+              <div className={styles.icon}>
                 <FontAwesomeIcon icon={item.icon} />
-              </motion.div>
+              </div>
 
               <span>{item.text}</span>
             </motion.div>
           ))}
 
-          {/* Card ancha destacada */}
+          {/* Card destacada */}
           <motion.div
             className={`${styles.card} ${styles.fullWidth}`}
             initial={{ opacity: 0, y: 25 }}
@@ -71,15 +66,11 @@ export default function WhyChoosingUs() {
             viewport={{ once: true }}
             whileHover={{ y: -6, scale: 1.01 }}
           >
-            <motion.div
-              className={styles.icon}
-              whileHover={{ rotate: 10 }}
-              transition={{ duration: 0.3 }}
-            >
+            <div className={styles.icon}>
               <FontAwesomeIcon icon={faArrowsSpin} />
-            </motion.div>
+            </div>
 
-            <span>Acompañamiento continuo</span>
+            <span>Acompañamiento continuo y actualización permanente</span>
           </motion.div>
         </div>
       </div>

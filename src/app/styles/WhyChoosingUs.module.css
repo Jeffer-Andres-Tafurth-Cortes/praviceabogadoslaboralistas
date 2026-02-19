@@ -1,6 +1,8 @@
+/* ================= SECTION ================= */
+
 .section {
-  background: #ffffff;
-  padding: 90px 20px;
+  background: #f9fbfd;
+  padding: 100px 20px;
 }
 
 .container {
@@ -8,21 +10,24 @@
   margin: 0 auto;
 }
 
+/* ================= TITLE ================= */
+
 .title {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
   color: #004a80;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   position: relative;
 }
 
 .title::after {
   content: "";
-  width: 50px;
-  height: 3px;
+  width: 60px;
+  height: 4px;
   background: #f4c300;
   display: block;
   margin-top: 12px;
+  border-radius: 3px;
 }
 
 /* ================= GRID ================= */
@@ -30,51 +35,66 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
+  gap: 28px;
 }
 
 /* ================= CARD ================= */
 
 .card {
   background: #ffffff;
-  padding: 20px 24px;
+  padding: 26px 24px;
   display: flex;
   align-items: center;
-  gap: 15px;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 74, 128, 0.12);
+  gap: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 74, 128, 0.1);
   transition: all 0.3s ease;
+  cursor: default;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 74, 128, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 74, 128, 0.12);
   border-color: #f4c300;
 }
 
-/* Card que ocupa toda la fila */
+/* ================= DESTACADA ================= */
+
 .fullWidth {
   grid-column: span 4;
-  border-left: 5px solid #004a80;
+  background: linear-gradient(90deg, #004a80, #005c9e);
+  color: #ffffff;
+  border: none;
+}
+
+.fullWidth span {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.fullWidth .icon {
+  background: #ffffff;
+  color: #004a80;
 }
 
 .fullWidth:hover {
-  border-left: 5px solid #c4911a;
+  box-shadow: 0 20px 40px rgba(0, 74, 128, 0.2);
+  transform: translateY(-6px);
 }
 
 /* ================= ICON ================= */
 
 .icon {
-  width: 42px;
-  height: 42px;
-  min-width: 42px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
   border-radius: 50%;
   background: #004a80;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 18px;
   transition: 0.3s ease;
 }
 
@@ -86,9 +106,10 @@
 /* ================= TEXT ================= */
 
 .card span {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: #004a80;
+  line-height: 1.4;
   transition: 0.3s ease;
 }
 
@@ -118,6 +139,10 @@
   }
 
   .title {
-    font-size: 22px;
+    font-size: 24px;
+  }
+
+  .card {
+    padding: 22px;
   }
 }
