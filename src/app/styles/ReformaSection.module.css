@@ -16,8 +16,9 @@
   font-size: 32px;
   font-weight: 700;
   color: #004a80;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   position: relative;
+  line-height: 1.3;
 }
 
 .title::after {
@@ -29,13 +30,23 @@
   margin-top: 12px;
 }
 
+/* ================= INTRO ================= */
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  max-width: 900px;
+  margin-bottom: 50px;
+}
+
 /* ================= GRID ================= */
 
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 /* ================= CARD ================= */
@@ -46,6 +57,7 @@
   border-radius: 8px;
   border: 1px solid rgba(0, 74, 128, 0.15);
   transition: all 0.3s ease;
+  height: 100%;
 }
 
 .card:hover {
@@ -59,6 +71,7 @@
   font-weight: 600;
   margin-bottom: 12px;
   color: #004a80;
+  line-height: 1.4;
 }
 
 .card p {
@@ -96,7 +109,7 @@
   display: flex;
   gap: 20px;
   align-items: flex-start;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   border-left: 5px solid #004a80;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
   transition: 0.3s ease;
@@ -109,28 +122,55 @@
 
 .cardWide h3 {
   margin-bottom: 8px;
-  font-size: 16px;
+  font-size: 18px;
   color: #004a80;
 }
 
 .cardWide p {
   font-size: 14px;
   color: #808080;
+  line-height: 1.6;
+}
+
+/* ================= SEO BLOCK ================= */
+
+.seoBlock {
+  margin-top: 40px;
+  padding: 30px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.seoBlock h3 {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #004a80;
+  font-weight: 600;
+}
+
+.seoBlock p {
+  margin-bottom: 15px;
+  text-align: justify;
 }
 
 /* ================= WARNING ================= */
 
 .warning {
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: #c4911a;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 /* ================= RESPONSIVE ================= */
 
-@media (max-width: 992px) {
+@media (max-width: 1100px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -147,5 +187,9 @@
 
   .title {
     font-size: 24px;
+  }
+
+  .intro {
+    font-size: 15px;
   }
 }
