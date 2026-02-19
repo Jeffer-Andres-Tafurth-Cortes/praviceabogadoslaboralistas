@@ -2,7 +2,7 @@
 
 .section {
   background: #ffffff;
-  padding: 90px 20px;
+  padding: 100px 20px;
 }
 
 .container {
@@ -13,20 +13,21 @@
 /* ================= TITLE ================= */
 
 .title {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
   color: #004a80;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   position: relative;
 }
 
 .title::after {
   content: "";
-  width: 50px;
-  height: 3px;
+  width: 60px;
+  height: 4px;
   background: #f4c300;
   display: block;
   margin-top: 12px;
+  border-radius: 3px;
 }
 
 /* ================= GRID ================= */
@@ -34,55 +35,57 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  gap: 30px;
 }
 
 /* ================= CARD ================= */
 
 .card {
   background: #ffffff;
-  padding: 20px 24px;
+  padding: 24px 26px;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 18px;
   border: 1px solid rgba(0, 74, 128, 0.12);
-  border-radius: 8px;
+  border-radius: 10px;
   transition: all 0.3s ease;
+  cursor: default;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 74, 128, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 74, 128, 0.12);
   border-color: #f4c300;
 }
 
 /* ================= ICON ================= */
 
 .icon {
-  width: 42px;
-  height: 42px;
-  min-width: 42px;
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
   border-radius: 50%;
   background: #004a80;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-  transition: 0.3s ease;
+  font-size: 18px;
+  transition: all 0.3s ease;
 }
 
 .card:hover .icon {
   background: linear-gradient(135deg, #f7c300, #c4911a);
-  color: #000;
+  color: #000000;
 }
 
 /* ================= TEXT ================= */
 
 .card span {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: #004a80;
+  line-height: 1.4;
   transition: 0.3s ease;
 }
 
@@ -105,5 +108,9 @@
 
   .title {
     font-size: 22px;
+  }
+
+  .card {
+    padding: 20px;
   }
 }

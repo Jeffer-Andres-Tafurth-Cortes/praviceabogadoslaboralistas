@@ -31,7 +31,6 @@ export default function ServicesSection() {
   return (
     <section className={styles.section} id="servicios">
       <div className={styles.container}>
-        {/* Título animado */}
         <motion.h2
           className={styles.title}
           initial={{ opacity: 0, y: 30 }}
@@ -54,7 +53,7 @@ export default function ServicesSection() {
                 delay: index * 0.08,
               }}
               viewport={{ once: true }}
-              whileHover={{ y: -5 }}
+              whileHover={{ y: -6 }}
             >
               <motion.div
                 className={styles.icon}
