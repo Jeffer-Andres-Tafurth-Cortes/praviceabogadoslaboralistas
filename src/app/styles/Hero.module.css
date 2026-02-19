@@ -107,6 +107,16 @@
   color: #808080;
 }
 
+/* Texto visible solo para buscadores */
+.srOnly {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
