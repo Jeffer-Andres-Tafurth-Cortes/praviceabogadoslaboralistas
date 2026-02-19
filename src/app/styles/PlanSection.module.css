@@ -1,0 +1,113 @@
+.section {
+  padding: 70px 20px;
+  background: #f5f5f5;
+  max-width: 1150px;
+  margin: auto;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2f3e50;
+  margin-bottom: 30px;
+}
+
+/* wrapper para scroll en celular */
+.tableWrapper {
+  overflow-x: auto;
+}
+
+/* TABLA */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+/* encabezados */
+.table thead th {
+  background: #f0f0f0;
+  padding: 18px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+/* columna destacada */
+.highlight {
+  background: #00a480 !important;
+  color: white !important;
+}
+
+/* filas */
+.table td {
+  padding: 18px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.rowTitle {
+  font-weight: 700;
+  background: #f7f7f7;
+  width: 220px;
+}
+
+/* mejor plan */
+.bestPlan {
+  background: #f0faf7;
+  border-left: 4px solid #00a480;
+}
+
+/* BOTONES */
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  background: #00a480;
+  color: white;
+  padding: 14px 22px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: 0.25s;
+}
+
+.primaryBtn:hover {
+  background: #008a6b;
+}
+
+.secondaryBtn {
+  border: 2px solid #5eb3e4;
+  color: #5eb3e4;
+  padding: 14px 22px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: 0.25s;
+}
+
+.secondaryBtn:hover {
+  background: #5eb3e4;
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .title {
+    font-size: 26px;
+  }
+
+  .table td,
+  .table th {
+    font-size: 13px;
+    padding: 14px;
+  }
+}

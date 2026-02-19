@@ -1,0 +1,83 @@
+/* SECCIÓN */
+.section {
+  padding: 60px 20px;
+  background: #f5f5f5;
+  max-width: 1100px;
+  margin: auto;
+  font-family: "Georgia", serif;
+}
+
+/* TÍTULO */
+.title {
+  font-size: 32px;
+  color: #2f3e50;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* TARJETA */
+.card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  padding: 18px 18px 18px 22px;
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+
+  transition: all 0.25s ease;
+}
+
+/* BARRA AZUL */
+.bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: #5eb3e4; /* tu paleta */
+}
+
+/* TEXTO */
+.card p {
+  font-size: 15px;
+  color: #444;
+  font-weight: 500;
+}
+
+/* HOVER PROFESIONAL */
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #5eb3e4;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

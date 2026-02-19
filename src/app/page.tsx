@@ -10,7 +10,6 @@ import ResultsSection from "./components/ResultsSection";
 import RisksSection from "./components/RisksSection";
 import PlanSection from "./components/PlansSection";
 import DiagnosticSection from "./components/DiagnosticSection";
-import Footer from "./components/Footer";
 import ReformaSection from "./components/ReformaSection";
 
 export default function Home() {
@@ -29,7 +28,6 @@ export default function Home() {
       <RisksSection />
       <PlanSection />
       <DiagnosticSection />
-      <Footer />
     </>
   );
 }

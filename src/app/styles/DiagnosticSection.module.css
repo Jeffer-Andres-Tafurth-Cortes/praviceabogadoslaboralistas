@@ -1,0 +1,145 @@
+.section {
+  padding: 80px 20px;
+  background: #f5f7fa;
+}
+
+.container {
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* TITULO */
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2f3e50;
+  margin-bottom: 18px;
+}
+
+.text {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+/* CARDS */
+.cards {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 6px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.full {
+  grid-column: span 2;
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  background: #5eb3e4;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.card h4 {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #2f3e50;
+}
+
+.card p {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.card span {
+  font-size: 13px;
+  color: #777;
+}
+
+/* BOTONES */
+.buttons {
+  margin-top: 26px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.primary {
+  background: #00a480;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.primary:hover {
+  background: #008a6b;
+}
+
+.secondary {
+  border: 2px solid #5eb3e4;
+  color: #5eb3e4;
+  padding: 12px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.secondary:hover {
+  background: #5eb3e4;
+  color: white;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 20px;
+  color: #555;
+}
+
+/* IMAGEN */
+.right img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .right {
+    order: -1;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .full {
+    grid-column: span 1;
+  }
+}
