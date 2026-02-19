@@ -21,30 +21,28 @@ export default function Resultados() {
   ];
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} aria-labelledby="results-title">
       {/* TÍTULO */}
       <motion.h2
+        id="results-title"
         className={styles.title}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Resultados que Generamos
+        Resultados que Generamos en Gestión Laboral
       </motion.h2>
 
       {/* LISTA */}
-      <div className={styles.list}>
+      <ul className={styles.list}>
         {items.map((item, index) => (
-          <motion.div
+          <motion.li
             key={index}
             className={styles.item}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.4,
-              delay: index * 0.1,
-            }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
             viewport={{ once: true }}
             whileHover={{ y: -4 }}
           >
@@ -52,14 +50,17 @@ export default function Resultados() {
               className={styles.icon}
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 250 }}
+              aria-hidden="true"
+              title={item.text}
             >
               <FontAwesomeIcon icon={item.icon} />
             </motion.div>
-
-            <p>{item.text}</p>
-          </motion.div>
+            <p>
+              <strong>{item.text}</strong>
+            </p>
+          </motion.li>
         ))}
-      </div>
+      </ul>
 
       {/* FOOTER */}
       <motion.p
@@ -69,7 +70,7 @@ export default function Resultados() {
         transition={{ duration: 0.8, delay: 0.3 }}
         viewport={{ once: true }}
       >
-        No improvisamos. Blindamos.
+        No improvisamos. Blindamos su gestión laboral con resultados tangibles.
       </motion.p>
     </section>
   );
