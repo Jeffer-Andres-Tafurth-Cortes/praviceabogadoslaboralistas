@@ -1,7 +1,7 @@
 /* ================= SECTION ================= */
 
 .section {
-  background: #ffffff;
+  background: #f9fafc;
   padding: 90px 20px;
 }
 
@@ -13,7 +13,7 @@
 /* ================= TITLES ================= */
 
 .title {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
   color: #004a80;
   margin-bottom: 20px;
@@ -31,12 +31,12 @@
 }
 
 .subtitle {
-  text-align: center;
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto 60px auto;
-  font-size: 15px;
-  color: #808080;
-  font-weight: 500;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  text-align: center;
 }
 
 /* ================= GRID ================= */
@@ -45,6 +45,99 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 60px 80px;
+  margin-bottom: 50px;
 }
 
-/* ================= ITEM =================*
+/* ================= ITEM ================= */
+
+.item {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 74, 128, 0.1);
+  transition: all 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 74, 128, 0.12);
+  border-color: #f4c300;
+}
+
+.item h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #004a80;
+}
+
+.item p {
+  font-size: 14px;
+  color: #808080;
+  line-height: 1.6;
+}
+
+/* ================= ICON ================= */
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #004a80;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  transition: 0.3s ease;
+}
+
+.item:hover .icon {
+  background: linear-gradient(135deg, #f7c300, #c4911a);
+  color: #000;
+}
+
+/* ================= SEO BLOCK ================= */
+
+.seoBlock {
+  margin-top: 40px;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.seoBlock h3 {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #004a80;
+  font-weight: 600;
+}
+
+.seoBlock p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+}
