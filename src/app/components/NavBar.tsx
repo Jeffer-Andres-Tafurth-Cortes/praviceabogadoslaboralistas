@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/NavBar.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const navItems = [
   { label: "Inicio", id: "inicio" },
@@ -40,8 +41,19 @@ export default function NavBar() {
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
-        <div className={styles.logo}>PRAVICE</div>
+        {/* LOGO */}
+        <Link href="/" className={styles.logoWrapper}>
+          <Image
+            src="/logo_pravice.png"
+            alt="PRAVICE - Asesoría Jurídica Laboral"
+            width={70}
+            height={70}
+            priority
+            className={styles.logo}
+          />
+        </Link>
 
+        {/* LINKS */}
         <div className={`${styles.links} ${menuOpen ? styles.open : ""}`}>
           {navItems.map((item) => (
             <a
@@ -54,21 +66,21 @@ export default function NavBar() {
             </a>
           ))}
 
-          {/* BLOG (ruta externa futura) */}
           <Link href="/blog" className={styles.blog}>
             Blog
           </Link>
 
-          {/* BOTÓN APP */}
           <a
-            href="https://app.tuempresa.com"
+            href="https://legalapp.pravice.co/login.php"
             target="_blank"
+            rel="noopener noreferrer"
             className={styles.cta}
           >
             Acceso Plataforma
           </a>
         </div>
 
+        {/* HAMBURGER */}
         <div
           className={styles.hamburger}
           onClick={() => setMenuOpen(!menuOpen)}

@@ -170,7 +170,7 @@ export default function AppSection() {
           viewport={{ once: true }}
         >
           <a
-            href="https://app.pravice.com"
+            href="https://legalapp.pravice.co/login.php"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.appButton}
