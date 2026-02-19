@@ -15,7 +15,6 @@ export default function MethodologySection() {
   return (
     <section className={styles.section} id="metodologia">
       <div className={styles.container}>
-        {/* Título */}
         <motion.h2
           className={styles.title}
           initial={{ opacity: 0, y: 30 }}
@@ -37,7 +36,7 @@ export default function MethodologySection() {
         </motion.p>
 
         <div className={styles.wrapper}>
-          {/* Textos laterales con aparición suave */}
+          {/* Textos */}
           <motion.div
             className={styles.leftTop}
             initial={{ opacity: 0, x: -30 }}
@@ -88,7 +87,7 @@ export default function MethodologySection() {
             Paso 5: Auditoría periódica
           </motion.div>
 
-          {/* Círculo principal */}
+          {/* Círculo */}
           <motion.div
             className={styles.circle}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -98,41 +97,25 @@ export default function MethodologySection() {
           >
             <div className={styles.innerCircle}></div>
 
-            {/* Íconos con micro animación */}
-            <motion.div
-              className={`${styles.icon} ${styles.icon1}`}
-              whileHover={{ scale: 1.15 }}
-            >
+            <div className={`${styles.icon} ${styles.icon1}`}>
               <FontAwesomeIcon icon={faMagnifyingGlass} />
-            </motion.div>
+            </div>
 
-            <motion.div
-              className={`${styles.icon} ${styles.icon2}`}
-              whileHover={{ scale: 1.15 }}
-            >
+            <div className={`${styles.icon} ${styles.icon2}`}>
               <FontAwesomeIcon icon={faFileLines} />
-            </motion.div>
+            </div>
 
-            <motion.div
-              className={`${styles.icon} ${styles.icon3}`}
-              whileHover={{ scale: 1.15 }}
-            >
+            <div className={`${styles.icon} ${styles.icon3}`}>
               <FontAwesomeIcon icon={faUsers} />
-            </motion.div>
+            </div>
 
-            <motion.div
-              className={`${styles.icon} ${styles.icon4}`}
-              whileHover={{ scale: 1.15 }}
-            >
+            <div className={`${styles.icon} ${styles.icon4}`}>
               <FontAwesomeIcon icon={faShieldHalved} />
-            </motion.div>
+            </div>
 
-            <motion.div
-              className={`${styles.icon} ${styles.icon5}`}
-              whileHover={{ scale: 1.15 }}
-            >
+            <div className={`${styles.icon} ${styles.icon5}`}>
               <FontAwesomeIcon icon={faClipboardCheck} />
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
