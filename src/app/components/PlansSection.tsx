@@ -5,16 +5,17 @@ import { motion } from "framer-motion";
 
 export default function PlanSection() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} aria-labelledby="plan-title">
       {/* TÍTULO */}
       <motion.h2
+        id="plan-title"
         className={styles.title}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Planes de Outsourcing Laboral
+        Planes de Outsourcing Laboral para Empresas
       </motion.h2>
 
       {/* TABLA */}
@@ -28,16 +29,20 @@ export default function PlanSection() {
         <table className={styles.table}>
           <thead>
             <tr>
-              <th></th>
-              <th>Plan Esencial</th>
-              <th>Plan Empresarial</th>
-              <th className={styles.highlight}>Plan Corporativo</th>
+              <th scope="col"></th>
+              <th scope="col">Plan Esencial</th>
+              <th scope="col">Plan Empresarial</th>
+              <th scope="col" className={styles.highlight}>
+                Plan Corporativo
+              </th>
             </tr>
           </thead>
 
           <tbody>
             <tr>
-              <td className={styles.rowTitle}>Alcance mensual</td>
+              <th scope="row" className={styles.rowTitle}>
+                Alcance mensual
+              </th>
               <td>Hasta 8 consultas y revisión de 10 contratos laborales.</td>
               <td>
                 Consultas ilimitadas prioritarias y revisión de 30 contratos
@@ -50,7 +55,9 @@ export default function PlanSection() {
             </tr>
 
             <tr>
-              <td className={styles.rowTitle}>Nivel de acompañamiento</td>
+              <th scope="row" className={styles.rowTitle}>
+                Nivel de acompañamiento
+              </th>
               <td>
                 Asesoría en procesos disciplinarios. Respuesta en 24 horas.
               </td>
@@ -65,16 +72,18 @@ export default function PlanSection() {
             </tr>
 
             <tr>
-              <td className={styles.rowTitle}>
+              <th scope="row" className={styles.rowTitle}>
                 Implementación Reforma 2025 incluida
-              </td>
+              </th>
               <td>Sí</td>
               <td>Sí</td>
               <td>Sí</td>
             </tr>
 
             <tr>
-              <td className={styles.rowTitle}>Características principales</td>
+              <th scope="row" className={styles.rowTitle}>
+                Características principales
+              </th>
               <td>
                 Acceso a plataforma digital. Ideal para empresas de 10 a 30
                 empleados.
@@ -98,7 +107,7 @@ export default function PlanSection() {
         </table>
       </motion.div>
 
-      {/* BOTONES */}
+      {/* BOTÓN */}
       <motion.div
         className={styles.buttons}
         initial={{ opacity: 0 }}
