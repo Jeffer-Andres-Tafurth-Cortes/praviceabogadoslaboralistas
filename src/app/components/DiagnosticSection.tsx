@@ -16,8 +16,32 @@ export default function DiagnosticSection() {
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
+  const cards = [
+    {
+      icon: faCalendarCheck,
+      title: "Inversión de la Asesoría",
+      content: "$450.000 + IVA",
+      extra: "Totalmente aplicable al primer mes de cualquier plan contratado",
+    },
+    {
+      icon: faClock,
+      title: "Respuesta Garantizada",
+      content: "Confirmación de agenda en menos de 24 horas laborales",
+    },
+    {
+      icon: faFileLines,
+      title: "Incluye Diagnóstico",
+      content: "Evaluación preliminar de riesgos sin costo adicional",
+      full: true,
+    },
+  ];
+
   return (
-    <section className={styles.section} id="diagnostico">
+    <section
+      className={styles.section}
+      id="diagnostico"
+      aria-labelledby="diagnostico-title"
+    >
       <div className={styles.container}>
         {/* IZQUIERDA */}
         <motion.div
@@ -27,17 +51,19 @@ export default function DiagnosticSection() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h2 className={styles.title}>Diagnóstico Laboral Empresarial</h2>
+          <h2 id="diagnostico-title" className={styles.title}>
+            Diagnóstico Laboral Empresarial: Evaluación y Blindaje de Riesgos
+          </h2>
 
           <p className={styles.text}>
-            Cada semana que opera sin blindaje laboral adecuado es una semana de
-            exposición innecesaria a contingencias que pueden costar millones.
-            No espere a recibir una demanda o una sanción del Ministerio de
-            Trabajo.
+            Cada semana que su empresa opera sin blindaje laboral adecuado es
+            una semana de exposición innecesaria a contingencias que pueden
+            generar costos millonarios. No espere a recibir una demanda o
+            sanción del Ministerio de Trabajo.
           </p>
 
           <p className={styles.text}>
-            Es el momento de actuar y proteger su empresa. Solicite ahora un
+            Es momento de actuar y proteger su empresa. Solicite ahora un
             diagnóstico especializado que le permitirá identificar riesgos,
             evaluar la Reforma 2025 y obtener una propuesta de blindaje
             personalizada.
@@ -45,27 +71,7 @@ export default function DiagnosticSection() {
 
           {/* CARDS */}
           <div className={styles.cards}>
-            {[
-              {
-                icon: faCalendarCheck,
-                title: "Inversión de la Asesoría",
-                content: "$450.000 + IVA",
-                extra:
-                  "Totalmente aplicable al primer mes de cualquier plan contratado",
-              },
-              {
-                icon: faClock,
-                title: "Respuesta Garantizada",
-                content:
-                  "Confirmación de agenda en menos de 24 horas laborales",
-              },
-              {
-                icon: faFileLines,
-                title: "Incluye Diagnóstico",
-                content: "Evaluación preliminar de riesgos sin costo adicional",
-                full: true,
-              },
-            ].map((item, index) => (
+            {cards.map((item, index) => (
               <motion.div
                 key={index}
                 className={`${styles.card} ${item.full ? styles.full : ""}`}
@@ -76,7 +82,7 @@ export default function DiagnosticSection() {
                 whileHover={{ y: -4 }}
               >
                 <div className={styles.icon}>
-                  <FontAwesomeIcon icon={item.icon} />
+                  <FontAwesomeIcon icon={item.icon} aria-hidden="true" />
                 </div>
                 <h4>{item.title}</h4>
                 <p>{item.content}</p>
@@ -93,15 +99,21 @@ export default function DiagnosticSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <a className={styles.primary} onClick={handleClickWhatsApp}>
-              Agendar Asesoría
-            </a>
-            <a className={styles.secondary} onClick={handleClickWhatsApp}>
-              Solicitar Evaluación Rápida
-            </a>
-            <a className={styles.secondary} onClick={handleClickWhatsApp}>
-              Solicitar Propuesta Personalizada
-            </a>
+            {[
+              "Agendar Asesoría",
+              "Solicitar Evaluación Rápida",
+              "Solicitar Propuesta Personalizada",
+            ].map((text, idx) => (
+              <a
+                key={idx}
+                className={idx === 0 ? styles.primary : styles.secondary}
+                onClick={handleClickWhatsApp}
+                role="button"
+                tabIndex={0}
+              >
+                {text}
+              </a>
+            ))}
           </motion.div>
 
           {/* FOOTER */}
@@ -125,7 +137,10 @@ export default function DiagnosticSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <img src="/diagnosticImage.jpg" alt="Reunión empresarial" />
+          <img
+            src="/diagnosticImage.jpg"
+            alt="Ejecutivos en reunión de diagnóstico laboral empresarial"
+          />
         </motion.div>
       </div>
     </section>
