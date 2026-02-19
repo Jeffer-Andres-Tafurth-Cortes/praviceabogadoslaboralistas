@@ -1,83 +1,79 @@
 "use client";
 
 import styles from "../styles/ImplementationSection.module.css";
-import { motion } from "framer-motion";
 
 const fases = [
-  "Fase 1 - Diagnóstico y matriz de brechas",
-  "Fase 2 - Actualización del Reglamento Interno de Trabajo",
-  "Fase 3 - Procedimiento disciplinario estructurado",
-  "Fase 4 - Contratos laborales blindados",
-  "Fase 5 - Jornada laboral y recargos ajustados",
-  "Fase 6 - Licencias y permisos actualizados",
-  "Fase 7 - Prevención de acoso y violencia laboral",
-  "Fase 8 - Inclusión laboral y reportes obligatorios",
-  "Fase 9 - Cesantías y obligaciones periódicas",
-  "Fase 10 - Protección de datos personales",
-  "Fase 11 - Renuncias, liquidaciones y paz y salvo",
-  "Fase 12 - Auditoría y mejora continua",
+  "Diagnóstico laboral y matriz de brechas normativas",
+  "Actualización del Reglamento Interno de Trabajo",
+  "Estructuración del procedimiento disciplinario",
+  "Contratos laborales blindados y actualizados",
+  "Jornada laboral, recargos y control de horas extras",
+  "Licencias, permisos y estabilidad laboral reforzada",
+  "Prevención de acoso y violencia laboral",
+  "Inclusión laboral y reportes obligatorios",
+  "Cesantías, intereses y obligaciones periódicas",
+  "Protección de datos personales laborales",
+  "Renuncias, liquidaciones y paz y salvo",
+  "Auditoría laboral y mejora continua",
 ];
 
 export default function ImplementacionSection() {
   return (
-    <section className={styles.section}>
+    <section
+      className={styles.section}
+      id="implementacion-ley-2466"
+      aria-labelledby="implementacion-reforma-laboral"
+      role="region"
+    >
       <div className={styles.container}>
-        {/* Título */}
-        <motion.h2
-          className={styles.title}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          Implementación Integral - Ley 2466 de 2025
-        </motion.h2>
+        <h2 id="implementacion-reforma-laboral" className={styles.title}>
+          Implementación Integral de la Reforma Laboral 2025 en Colombia (Ley
+          2466)
+        </h2>
 
-        {/* Subtítulo */}
-        <motion.p
-          className={styles.subtitle}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          Basado en el Manual Práctico de Implementación
-        </motion.p>
+        <p className={styles.subtitle}>
+          Metodología estructurada en 12 fases para garantizar cumplimiento
+          normativo, prevención de sanciones y blindaje jurídico empresarial.
+        </p>
 
         <div className={styles.grid}>
           {fases.map((fase, index) => (
-            <motion.div
-              key={index}
-              className={styles.item}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.07,
-              }}
-              viewport={{ once: true }}
-              whileHover={{
-                y: -4,
-              }}
-            >
-              <motion.span
-                className={styles.number}
-                initial={{ scale: 0.8, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                transition={{
-                  duration: 0.4,
-                  delay: index * 0.07 + 0.1,
-                }}
-                viewport={{ once: true }}
-              >
+            <article key={index} className={styles.item}>
+              <span className={styles.number}>
                 {String(index + 1).padStart(2, "0")}
-              </motion.span>
+              </span>
 
               <div className={styles.line}></div>
 
               <h3>{fase}</h3>
-            </motion.div>
+            </article>
           ))}
+        </div>
+
+        {/* BLOQUE SEO ENRIQUECIDO */}
+        <div className={styles.seoBlock}>
+          <h3>¿Cómo implementar la Ley 2466 de 2025 en su empresa?</h3>
+
+          <p>
+            La implementación de la Reforma Laboral 2025 en Colombia requiere
+            una revisión integral de contratos laborales, reglamentos internos,
+            procedimientos disciplinarios y obligaciones periódicas ante
+            autoridades laborales.
+          </p>
+
+          <p>
+            Un proceso estructurado permite identificar brechas de cumplimiento,
+            reducir riesgos de demandas laborales y evitar sanciones
+            administrativas impuestas por el Ministerio del Trabajo.
+          </p>
+
+          <h3>Beneficios de una implementación preventiva</h3>
+          <p>
+            Las empresas que adoptan una auditoría laboral preventiva y
+            protocolos actualizados minimizan contingencias económicas,
+            fortalecen su seguridad jurídica y protegen su reputación
+            corporativa.
+          </p>
         </div>
       </div>
     </section>
