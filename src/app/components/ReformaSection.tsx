@@ -12,7 +12,7 @@ import {
 
 export default function ReformaSection() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="reforma">
       <div className={styles.container}>
         <h2 className={styles.title}>
           La Reforma Laboral 2025 Cambió las Reglas

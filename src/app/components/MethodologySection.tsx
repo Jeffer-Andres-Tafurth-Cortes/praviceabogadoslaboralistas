@@ -12,7 +12,7 @@ import {
 
 export default function MethodologySection() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="metodologia">
       <div className={styles.container}>
         <h2 className={styles.title}>Metodología PRAVICE</h2>
         <p className={styles.subtitle}>Blindaje Laboral Estructurado</p>

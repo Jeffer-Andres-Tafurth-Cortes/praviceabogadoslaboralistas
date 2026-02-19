@@ -28,7 +28,7 @@ const servicios = [
 
 export default function ServicesSection() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="servicios">
       <div className={styles.container}>
         <h2 className={styles.title}>Servicios Laborales Empresariales</h2>
 

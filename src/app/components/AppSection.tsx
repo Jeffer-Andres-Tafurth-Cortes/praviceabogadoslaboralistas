@@ -2,7 +2,7 @@ import styles from "../styles/AppSection.module.css";
 
 export default function AppSection() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="app">
       <div className={styles.container}>
         <h2 className={styles.title}>
           APP LABORAL PRAVICE: Control Total de su Gestión Laboral, 24/7

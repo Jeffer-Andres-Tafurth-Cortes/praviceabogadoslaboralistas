@@ -8,7 +8,7 @@ import {
 
 export default function DiagnosticSection() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="diagnostico">
       <div className={styles.container}>
         {/* IZQUIERDA */}
         <div className={styles.left}>
