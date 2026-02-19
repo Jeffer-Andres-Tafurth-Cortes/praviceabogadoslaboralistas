@@ -15,38 +15,38 @@ export default function RisksSection() {
   ];
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} aria-labelledby="risks-title">
       {/* TÍTULO */}
       <motion.h2
+        id="risks-title"
         className={styles.title}
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Riesgos que Prevenimos
+        Riesgos que Prevenimos en su Empresa
       </motion.h2>
 
       {/* GRID */}
-      <div className={styles.grid}>
+      <ul className={styles.grid}>
         {riesgos.map((riesgo, index) => (
-          <motion.div
+          <motion.li
             key={index}
             className={styles.card}
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.4,
-              delay: index * 0.08,
-            }}
+            transition={{ duration: 0.4, delay: index * 0.08 }}
             viewport={{ once: true }}
             whileHover={{ y: -3 }}
           >
-            <span className={styles.bar}></span>
-            <p>{riesgo}</p>
-          </motion.div>
+            <span className={styles.bar} aria-hidden="true"></span>
+            <p>
+              <strong>{riesgo}</strong>
+            </p>
+          </motion.li>
         ))}
-      </div>
+      </ul>
 
       {/* FOOTER */}
       <motion.p
