@@ -1,7 +1,6 @@
 "use client";
 
 import styles from "../styles/Hero.module.css";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -42,13 +41,21 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2 }}
         >
-          <Link href="/contacto" className={styles.primaryBtn}>
+          <button
+            className={styles.primaryBtn}
+            onClick={() => {
+              window.open(
+                "https://wa.me/573114659315?text=Hola%20PRAVICE,%20quiero%20información%20sobre%20asesoría%20laboral.",
+                "_blank",
+              );
+            }}
+          >
             Agendar Asesoría Laboral
-          </Link>
+          </button>
 
-          <Link href="/reforma-2025" className={styles.secondaryBtn}>
+          <a href="#reforma" className={styles.secondaryBtn}>
             Solicitar Evaluación Reforma 2025
-          </Link>
+          </a>
         </motion.div>
 
         <motion.span

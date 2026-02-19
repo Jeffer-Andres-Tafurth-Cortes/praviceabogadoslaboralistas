@@ -106,11 +106,13 @@ export default function PlanSection() {
         transition={{ duration: 0.6, delay: 0.3 }}
         viewport={{ once: true }}
       >
-        <a href="#" className={styles.primaryBtn}>
+        <a
+          href="https://api.whatsapp.com/message/RE7FEN4IGOISD1?autoload=1&app_absent=0"
+          className={styles.primaryBtn}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Solicitar Propuesta Personalizada
-        </a>
-        <a href="#" className={styles.secondaryBtn}>
-          Comparar Planes en Detalle
         </a>
       </motion.div>
     </section>

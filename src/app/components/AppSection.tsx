@@ -175,7 +175,10 @@ export default function AppSection() {
             rel="noopener noreferrer"
             className={styles.appButton}
           >
-            Ingresar a App Legal Pravice
+            <span className={styles.buttonText}>
+              Ingresar a App Legal Pravice
+            </span>
+            <span className={styles.buttonGlow}></span>
           </a>
         </motion.div>
       </div>

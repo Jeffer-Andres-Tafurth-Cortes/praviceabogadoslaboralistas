@@ -111,23 +111,6 @@
   transform: translateY(-2px);
 }
 
-/* BOTÓN SECUNDARIO */
-
-.secondaryBtn {
-  border: 2px solid #004a80;
-  color: #004a80;
-  padding: 15px 26px;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.secondaryBtn:hover {
-  background: #004a80;
-  color: #ffffff;
-}
-
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {

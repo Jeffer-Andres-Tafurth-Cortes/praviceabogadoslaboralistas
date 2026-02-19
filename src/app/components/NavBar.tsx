@@ -46,8 +46,8 @@ export default function NavBar() {
           <Image
             src="/logo_pravice.png"
             alt="PRAVICE - Asesoría Jurídica Laboral"
-            width={70}
-            height={70}
+            width={50}
+            height={50}
             priority
             className={styles.logo}
           />

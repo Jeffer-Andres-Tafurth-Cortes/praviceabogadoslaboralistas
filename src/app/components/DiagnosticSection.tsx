@@ -10,6 +10,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function DiagnosticSection() {
+  const handleClickWhatsApp = () => {
+    const url =
+      "https://wa.me/573114659315?text=Hola%20PRAVICE,%20quiero%20información%20sobre%20asesoría%20laboral.";
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <section className={styles.section} id="diagnostico">
       <div className={styles.container}>
@@ -87,9 +93,13 @@ export default function DiagnosticSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <a className={styles.primary}>Agendar Asesoría</a>
-            <a className={styles.secondary}>Solicitar Evaluación Rápida</a>
-            <a className={styles.secondary}>
+            <a className={styles.primary} onClick={handleClickWhatsApp}>
+              Agendar Asesoría
+            </a>
+            <a className={styles.secondary} onClick={handleClickWhatsApp}>
+              Solicitar Evaluación Rápida
+            </a>
+            <a className={styles.secondary} onClick={handleClickWhatsApp}>
               Solicitar Propuesta Personalizada
             </a>
           </motion.div>
