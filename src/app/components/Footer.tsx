@@ -61,7 +61,7 @@ export default function Footer() {
                 className={styles.icon}
                 aria-hidden="true"
               />
-              <a href="mailto:info@pravice.co">
+              <a href="mailto:info.pravice@abogadosespecialistas.com.co">
                 info.pravice@abogadosespecialistas.com.co
               </a>
             </p>
