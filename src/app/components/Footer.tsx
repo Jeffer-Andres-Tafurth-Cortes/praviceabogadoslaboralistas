@@ -124,8 +124,8 @@ export default function Footer() {
         {/* BARRA LEGAL */}
         <div className={styles.legal}>
           <p>
-            © 2024 PRAVICE Abogados Laboralistas. Todos los derechos reservados.
-            | <a href="#">Política de Privacidad</a> |
+            © {new Date().getFullYear()} PRAVICE Abogados Laboralistas. Todos
+            los derechos reservados. | <a href="#">Política de Privacidad</a> |
             <a href="#"> Términos y Condiciones</a> |
             <a href="#"> Aviso Legal</a> |
             <a href="#"> Tratamiento de Datos Personales</a>
